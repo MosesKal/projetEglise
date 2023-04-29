@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cellule{% endblock %}
+
+{% block body %}
+    <h1>Cellule</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>#</th>
+                <td>{{ cellule.id }}</td>
+            </tr>
+            <tr>
+                <th>Cellule</th>
+                <td>{{ cellule.nomcel }}</td>
+            </tr>
+            <tr>
+                <th>Commune</th>
+                <td>{{ cellule.commune }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cellule_index') }}">back to list</a>
+
+    <a href="{{ path('app_cellule_edit', {'id': cellule.id}) }}">Modifier</a>
+
+    {{ include('cellule/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cellule{% endblock %}
+
+{% block body %}
+    <h1>Create new Cellule</h1>
+
+    {{ include('cellule/_form.html.twig') }}
+
+    <a href="{{ path('app_cellule_index') }}">back to list</a>
+{% endblock %}
